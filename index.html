@@ -19,7 +19,6 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(15, 18, 18, 0.582);
 }
 h1 {
     text-align: center;
@@ -90,7 +89,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(15, 18, 18, 0.582);
+    box-shadow: 0 0 10px rgba(15, 18, 18, 0.1);
 }
 .footer img {
     width: 50px;
@@ -104,9 +103,37 @@ h1 {
     font-size: 14px;
     margin-top: 5px;
 }
+#clock {
+font-size: 48px;
+text-align: center;
+margin-top: 50px;
+ color: #333;
+ background-color: #fff;
+ border: 2px solid #333;
+ border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ width: 200px;
+ margin-left: auto;
+ margin-right: auto;
+    }
     </style>
 </head>
 <body>
+      <div id="clock">clock</div>
+
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours().toString().padStart(2, '0');
+        var minutes = now.getMinutes().toString().padStart(2, '0');
+        var seconds = now.getSeconds().toString().padStart(2, '0');
+        var timeString = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('clock').textContent = timeString;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
     <div class="container">
         
         <h1>Weather Update</h1>
@@ -119,13 +146,13 @@ h1 {
         <br><br>  <br> <br> <br> <br><br> <br> <br><br> <br><br> <br> <br>
             
     </div>
-    <div class="10"> <img src=E:\html\github\received_2490736767897540-01.jpeg alt="Chittagong" id="background-img"></div>
+    <div class="10"> <img src="11.png" alt="Chittagong" id="background-img"></div>
     <div class="two">
        
 </p>
     </div>
     <div class="footer">
-        <img src="C:/Users/mdsis/OneDrive/Documents/555555.jpg" alt="my Photo" >
+        <img src="12.jpg" alt="my Photo" >
         <p>Name: Md. Saidul Islam Shuvo</p>
         <p> Address: Solmaid ,dhalibari, Vatara, Dhaka 1212</p>
         <p> Mail: mdsishuvo254@gmail.com</p>
