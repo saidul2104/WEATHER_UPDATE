@@ -132,11 +132,7 @@ h1 {
         var timeString = hours + ':' + minutes + ':' + seconds;
         document.getElementById('clock').textContent = timeString;
       }
-  
-      // Update clock every second
       setInterval(updateClock, 1000);
-  
-      // Initial call to display the clock immediately
       updateClock();
     </script>
     <div class="container">
